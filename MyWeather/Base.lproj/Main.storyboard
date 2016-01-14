@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYN-U3-5EE" customClass="DrowingButton" customModule="MyWeather" customModuleProvider="target">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9sj-us-D6h"/>
+                                    <constraint firstAttribute="height" constant="200" id="dGK-Nk-EEj"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zUe-xr-pyY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FG-qj-zdW">
+                                <rect key="frame" x="205" y="266" width="190" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="HK5-JL-2Uk"/>
+                                    <constraint firstAttribute="height" constant="67" id="PLj-oX-y4G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27058823529411763" green="0.792156862745098" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wYN-U3-5EE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Sd-Rh-rwM"/>
+                            <constraint firstItem="4FG-qj-zdW" firstAttribute="centerY" secondItem="wYN-U3-5EE" secondAttribute="centerY" id="CYc-zV-Way"/>
+                            <constraint firstItem="wYN-U3-5EE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kkM-rq-pl2"/>
+                            <constraint firstItem="4FG-qj-zdW" firstAttribute="centerX" secondItem="wYN-U3-5EE" secondAttribute="centerX" id="mnX-ZF-Rnv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="wYN-U3-5EE" id="lhq-1h-nhT"/>
+                        <outlet property="lable" destination="4FG-qj-zdW" id="MP0-oN-4C4"/>
+                        <segue destination="U37-gm-bfS" kind="show" identifier="showWeather" animates="NO" id="fqV-OM-Bzc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="276"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="Rh2-aD-XVr">
+            <objects>
+                <viewController id="U37-gm-bfS" customClass="WeatherViewController" customModule="MyWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oNa-Zb-CnF"/>
+                        <viewControllerLayoutGuide type="bottom" id="2cg-wh-XFI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6gO-lb-CDF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQs-Hy-9F8" customClass="DrowingButton" customModule="MyWeather" customModuleProvider="target">
+                                <rect key="frame" x="20" y="50" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="LYG-zx-Ppm"/>
+                                    <constraint firstAttribute="width" constant="130" id="big-FD-gUJ"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWA-x8-gah">
+                                <rect key="frame" x="35" y="90" width="100" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8gZ-HA-jOQ"/>
+                                    <constraint firstAttribute="height" constant="70" id="WBP-la-LpY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG0-Ec-06U" customClass="DrowingButton" customModule="MyWeather" customModuleProvider="target">
+                                <rect key="frame" x="210" y="68" width="100" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="fsq-IY-p3w"/>
+                                    <constraint firstAttribute="width" constant="100" id="q3D-40-2qJ"/>
+                                </constraints>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i2P-pZ-hCU">
+                                <rect key="frame" x="225" y="84" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="66w-WV-agE"/>
+                                    <constraint firstAttribute="width" constant="70" id="73g-fa-RzF"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5US-y3-cdA" customClass="DrowingButton" customModule="MyWeather" customModuleProvider="target">
+                                <rect key="frame" x="30" y="212" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="9eO-oQ-EBn"/>
+                                    <constraint firstAttribute="width" constant="180" id="JV1-mN-rKY"/>
+                                </constraints>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location74" translatesAutoresizingMaskIntoConstraints="NO" id="75d-tx-dDd">
+                                <rect key="frame" x="40" y="282" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="njd-5X-Xt0"/>
+                                    <constraint firstAttribute="width" constant="40" id="wPk-xo-AuQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g91-zT-9uq" customClass="DrowingButton" customModule="MyWeather" customModuleProvider="target">
+                                <rect key="frame" x="465" y="338" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Fw0-BX-8DC"/>
+                                    <constraint firstAttribute="height" constant="100" id="mfo-av-7H1"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsz-AV-Zvm" customClass="DrowingButton" customModule="MyWeather" customModuleProvider="target">
+                                <rect key="frame" x="120" y="452" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4CW-15-kWr"/>
+                                    <constraint firstAttribute="width" constant="100" id="RfH-a9-ArB"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etC-h0-ApS">
+                                <rect key="frame" x="495" y="385" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLl-HG-0d2">
+                                <rect key="frame" x="149" y="499" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDI-le-Nbe">
+                                <rect key="frame" x="66" y="74" width="39" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHY-Ki-eXo">
+                                <rect key="frame" x="474" y="362" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Das-Ox-Z4c">
+                                <rect key="frame" x="131" y="476" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-LC-2iO">
+                                <rect key="frame" x="88" y="280" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6AS-hL-qVY"/>
+                                    <constraint firstAttribute="width" constant="120" id="xIu-eg-82S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27058823529999998" green="0.79215686269999996" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="i2P-pZ-hCU" firstAttribute="centerY" secondItem="yG0-Ec-06U" secondAttribute="centerY" constant="0.5" id="6Ar-QW-XBD"/>
+                            <constraint firstItem="i2P-pZ-hCU" firstAttribute="centerX" secondItem="yG0-Ec-06U" secondAttribute="centerX" id="7BN-4u-T0Y"/>
+                            <constraint firstItem="YPr-LC-2iO" firstAttribute="top" secondItem="6gO-lb-CDF" secondAttribute="top" constant="280" id="FU8-o0-zq5"/>
+                            <constraint firstItem="Das-Ox-Z4c" firstAttribute="centerX" secondItem="vsz-AV-Zvm" secondAttribute="centerX" id="GZ5-jL-4DT"/>
+                            <constraint firstItem="g91-zT-9uq" firstAttribute="top" secondItem="yG0-Ec-06U" secondAttribute="bottom" constant="169" id="GuL-65-Wzr"/>
+                            <constraint firstItem="etC-h0-ApS" firstAttribute="centerX" secondItem="g91-zT-9uq" secondAttribute="centerX" constant="1" id="IBq-2G-ZKO"/>
+                            <constraint firstItem="sWA-x8-gah" firstAttribute="centerY" secondItem="EQs-Hy-9F8" secondAttribute="centerY" constant="10" id="KgX-UY-Bge"/>
+                            <constraint firstItem="75d-tx-dDd" firstAttribute="top" secondItem="EQs-Hy-9F8" secondAttribute="bottom" constant="102" id="Kyy-up-uKd"/>
+                            <constraint firstItem="etC-h0-ApS" firstAttribute="top" secondItem="AHY-Ki-eXo" secondAttribute="bottom" constant="2" id="M8d-nm-hWd"/>
+                            <constraint firstItem="YPr-LC-2iO" firstAttribute="leading" secondItem="75d-tx-dDd" secondAttribute="trailing" constant="8" symbolic="YES" id="MbZ-c8-gzb"/>
+                            <constraint firstItem="5US-y3-cdA" firstAttribute="top" secondItem="EQs-Hy-9F8" secondAttribute="bottom" constant="32" id="Srs-Rx-Pcq"/>
+                            <constraint firstItem="AHY-Ki-eXo" firstAttribute="centerX" secondItem="g91-zT-9uq" secondAttribute="centerX" id="UjY-b7-rol"/>
+                            <constraint firstItem="EQs-Hy-9F8" firstAttribute="leading" secondItem="6gO-lb-CDF" secondAttribute="leadingMargin" id="VsL-js-qR6"/>
+                            <constraint firstItem="75d-tx-dDd" firstAttribute="leading" secondItem="6gO-lb-CDF" secondAttribute="leadingMargin" constant="20" id="W8Q-Hs-4Ud"/>
+                            <constraint firstItem="GLl-HG-0d2" firstAttribute="centerX" secondItem="vsz-AV-Zvm" secondAttribute="centerX" id="bVd-rQ-bqb"/>
+                            <constraint firstItem="HDI-le-Nbe" firstAttribute="centerX" secondItem="EQs-Hy-9F8" secondAttribute="centerX" constant="0.5" id="hhN-mV-WPK"/>
+                            <constraint firstItem="GLl-HG-0d2" firstAttribute="centerY" secondItem="vsz-AV-Zvm" secondAttribute="centerY" constant="7.5" id="hy1-n8-WD4"/>
+                            <constraint firstItem="vsz-AV-Zvm" firstAttribute="leading" secondItem="6gO-lb-CDF" secondAttribute="leadingMargin" constant="100" id="iKp-qW-GVd"/>
+                            <constraint firstItem="5US-y3-cdA" firstAttribute="leading" secondItem="6gO-lb-CDF" secondAttribute="leadingMargin" constant="10" id="jyO-Cc-mWc"/>
+                            <constraint firstItem="etC-h0-ApS" firstAttribute="centerY" secondItem="g91-zT-9uq" secondAttribute="centerY" constant="7.5" id="kWc-cx-Jdg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g91-zT-9uq" secondAttribute="trailing" constant="15" id="oPi-a9-L4a"/>
+                            <constraint firstItem="yG0-Ec-06U" firstAttribute="top" secondItem="oNa-Zb-CnF" secondAttribute="bottom" constant="48" id="qEa-Dq-X4P"/>
+                            <constraint firstItem="5US-y3-cdA" firstAttribute="top" secondItem="HDI-le-Nbe" secondAttribute="bottom" constant="115" id="sLY-uN-dcW"/>
+                            <constraint firstItem="vsz-AV-Zvm" firstAttribute="top" secondItem="g91-zT-9uq" secondAttribute="bottom" constant="14" id="tGj-6P-r7S"/>
+                            <constraint firstItem="sWA-x8-gah" firstAttribute="centerX" secondItem="EQs-Hy-9F8" secondAttribute="centerX" id="tVI-hq-qB1"/>
+                            <constraint firstItem="yG0-Ec-06U" firstAttribute="leading" secondItem="EQs-Hy-9F8" secondAttribute="trailing" constant="60" id="wZ4-r0-w4T"/>
+                            <constraint firstItem="EQs-Hy-9F8" firstAttribute="top" secondItem="oNa-Zb-CnF" secondAttribute="bottom" constant="30" id="x0G-xR-dFu"/>
+                            <constraint firstItem="GLl-HG-0d2" firstAttribute="top" secondItem="Das-Ox-Z4c" secondAttribute="bottom" constant="2" id="ymq-oq-3sr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLable" destination="YPr-LC-2iO" id="2b0-MY-0nc"/>
+                        <outlet property="imageOfWeather" destination="i2P-pZ-hCU" id="UPp-li-hoU"/>
+                        <outlet property="labelTemp" destination="sWA-x8-gah" id="I4U-ML-Cxp"/>
+                        <outlet property="locationMarkOutlet" destination="75d-tx-dDd" id="0r8-bw-zw9"/>
+                        <outlet property="maxTempLabel" destination="etC-h0-ApS" id="EId-ei-erq"/>
+                        <outlet property="minTempLabel" destination="GLl-HG-0d2" id="Cb0-jn-rXC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94z-4m-pio" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931" y="276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location74" width="256" height="256"/>
+    </resources>
+</document>
