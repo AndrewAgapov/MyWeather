@@ -98,9 +98,7 @@ class ViewController: UIViewController, WeatherDataSourceDelegate, CLLocationMan
         makingAnimation(lable)
     }
     
-    
-    
-    
+  
     
     
     override func viewDidLoad() {
@@ -115,12 +113,7 @@ class ViewController: UIViewController, WeatherDataSourceDelegate, CLLocationMan
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
-        
-        
-        
-        
-        
-        
+    
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
